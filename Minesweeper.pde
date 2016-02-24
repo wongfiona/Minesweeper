@@ -1,7 +1,7 @@
-
-
 import de.bezier.guido.*;
 //Declare and initialize NUM_ROWS and NUM_COLS = 20
+public final static int NUM_ROWS = 20;
+public final static int NUM_COLS = 20;
 private MSButton[][] buttons; //2d array of minesweeper buttons
 private ArrayList <MSButton> bombs; //ArrayList of just the minesweeper buttons that are mined
 
@@ -11,7 +11,7 @@ void setup ()
     textAlign(CENTER,CENTER);
     
     // make the manager
-    Interactive.make( this );
+    Interactive.make(this);
     
     //your code to declare and initialize buttons goes here
     
@@ -26,7 +26,7 @@ public void setBombs()
 
 public void draw ()
 {
-    background( 0 );
+    background(0);
     if(isWon())
         displayWinningMessage();
 }
@@ -51,7 +51,7 @@ public class MSButton
     private boolean clicked, marked;
     private String label;
     
-    public MSButton ( int rr, int cc )
+    public MSButton (int rr, int cc)
     {
         // width = 400/NUM_COLS;
         // height = 400/NUM_ROWS;
@@ -61,7 +61,7 @@ public class MSButton
         y = r*height;
         label = "";
         marked = clicked = false;
-        Interactive.add( this ); // register it with the manager
+        Interactive.add(this); // register it with the manager
     }
     public boolean isMarked()
     {
@@ -86,9 +86,9 @@ public class MSButton
         // else if( clicked && bombs.contains(this) ) 
         //     fill(255,0,0);
         else if(clicked)
-            fill( 200 );
+            fill(200);
         else 
-            fill( 100 );
+            fill(100);
 
         rect(x, y, width, height);
         fill(0);
@@ -110,6 +110,3 @@ public class MSButton
         return numBombs;
     }
 }
-
-
-
