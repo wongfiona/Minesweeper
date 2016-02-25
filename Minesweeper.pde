@@ -14,7 +14,7 @@ void setup ()
     Interactive.make(this);
     
     //your code to declare and initialize buttons goes here
-    
+    buttons = new MSButton[NUM_ROWS][NUM_COLS];
     
     
     setBombs();
