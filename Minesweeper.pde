@@ -112,21 +112,21 @@ public class MSButton
     public int countBombs(int row, int col)
     {
         int numBombs = 0;
-        if (isValid(r, c+1) && bombs.contains(buttons[r][c+1]))
+        if (isValid(row, col+1) && bombs.contains(buttons[row][col+1]))
             numBombs++;
-        if (isValid(r, c-1) && bombs.contains(buttons[r][c-1]))
+        if (isValid(row, col-1) && bombs.contains(buttons[row][col-1]))
             numBombs++;
-        if (isValid(r+1, c) && bombs.contains(buttons[r+1][c]))
+        if (isValid(row+1, col) && bombs.contains(buttons[row+1][col]))
             numBombs++;
-        if (isValid(r-1, c) && bombs.contains(buttons[r-1][c]))
+        if (isValid(row-1, col) && bombs.contains(buttons[row-1][col]))
             numBombs++;
-        if (isValid(r+1, c+1) && bombs.contains(buttons[r+1][c+1]))
+        if (isValid(row+1, col+1) && bombs.contains(buttons[row+1][col+1]))
             numBombs++;
-        if (isValid(r-1, c+1) && bombs.contains(buttons[r-1][c+1]))
+        if (isValid(row-1, col+1) && bombs.contains(buttons[row-1][col+1]))
             numBombs++;
-        if (isValid(r+1, c-1) && bombs.contains(buttons[r+1][c-1]))
+        if (isValid(row+1, col-1) && bombs.contains(buttons[row+1][col-1]))
             numBombs++;
-        if (isValid(r-1, c-1) && bombs.contains(buttons[r-1][c+1]))
+        if (isValid(row-1, col-1) && bombs.contains(buttons[row-1][col+1]))
             numBombs++;
         return numBombs;
     }
