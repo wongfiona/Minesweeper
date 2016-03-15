@@ -39,6 +39,7 @@ public void draw ()
 public boolean isWon()
 {
     //your code here
+
     return false;
 }
 public void displayLosingMessage()
@@ -81,7 +82,16 @@ public class MSButton
     public void mousePressed () 
     {
         clicked = true;
-        //if (keyPressed)
+        if (keyPressed == true)
+            marked = true;
+        else if (bombs.contains(this))
+            displayLosingMessage();
+        else if (countBombs(r,c) > 0)
+            setLabel("" + countBombs(r,c));
+        else 
+            
+            
+        }
     }
 
     public void draw () 
