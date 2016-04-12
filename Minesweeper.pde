@@ -123,10 +123,8 @@ public class MSButton
                 for (int i = -1; i < 2; i++)
                 {
                     for (int j = -1; j < 2; j++)
-                    {
                         if (isValid(r+i, c+j) == true && buttons[r+i][c+j].isClicked() == false)
                             buttons[r+i][c+j].mousePressed();
-                    }
                 }    
             }
         }
